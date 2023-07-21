@@ -267,6 +267,7 @@ How can we ensure attesters are not returning high entropy responses?
 - In the near term for experimentation, the attester should publicly declare what they are attesting
 to, with readable and verifiable verdicts.
 - Beyond the experimentation phase, we need a verifiable method to enforce low entropy responses.
+
 We would like to explore options like splitting the attester and token issuer functions from one
 role to two independent organizations, where the token issuer can verify the attestation response
 meets the entropy requirements. 
