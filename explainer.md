@@ -48,6 +48,7 @@ trust is the backbone of the open internet, critical for the safety of user data
 sustainability of the website’s business.
 
 Some examples of scenarios where users depend on client trust include:
+
 - Users like visiting websites that are expensive to create and maintain, but they often want or
 need to do it without paying directly. These websites fund themselves with ads, but the advertisers
 can only afford to pay for humans to see the ads, rather than robots. This creates a need for human
@@ -159,11 +160,13 @@ sequenceDiagram
 ### What information is in the signed attestation?
 
 The proposal calls for at least the following information in the signed attestation:
+
 - The attester's identity, for example, "Google Play".
 - A verdict saying whether the attester considers the device trustworthy.
 
 We're still discussing whether each of the following pieces of information should be included and
 welcome your feedback:
+
 -  The device integrity verdict must be low entropy, but what granularity of verdicts should we
 allow? Including more information in the verdict will cover a wider range of use cases without
 locking out older devices. A granular approach proved useful previously in the Play Integrity API.
@@ -172,6 +175,7 @@ org.mozilla.firefox, or com.apple.mobilesafari.
 - Some indicator enabling rate limiting against a physical device
 
 We strongly feel the following data should never be included:
+
 - A device ID that is a unique identifier accessible to API consumers
 
 ## How can I use web environment integrity?
@@ -259,6 +263,7 @@ value. The attestation payloads will only include information about device and a
 as attesters will not have access to the profile information in applications.
 
 How can we ensure attesters are not returning high entropy responses?
+
 - In the near term for experimentation, the attester should publicly declare what they are attesting
 to, with readable and verifiable verdicts.
 - Beyond the experimentation phase, we need a verifiable method to enforce low entropy responses.
